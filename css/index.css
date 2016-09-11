@@ -18,6 +18,7 @@
 	.header{
 		width: 1200px;
 		margin: 0px auto;
+		position: relative;
 		/*overflow: hidden;*/
 		font-family: "Microsoft YaHei";
 	}
@@ -44,10 +45,15 @@
 		width:56%; 
 		margin-top: 68px;
 		position: relative;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		z-index: 100;
 	}
 	.navBar>ul{
 		display: block;
 		overflow: hidden;
+
 	}
 	.navBar>ul>li{
 		display: block;
@@ -95,12 +101,11 @@
 	.body{
 		width: 100%;
 		overflow: hidden;
-		position: absolute;
-		top: 130px;
-		left: 0px;
+		
 		z-index: -1;
 		margin-bottom: 30px;
 		font-family: "Microsoft YaHei";
+		background-color: #f2f2f2;
 	}
 	.slidePic ul{
 		overflow: hidden;
@@ -291,15 +296,17 @@
 		
 	}
 	.slidePicsb ul li .pic-desc p{
+
 		opacity: 1;
 		display: block;
 		width: 100%;
-		filter: alpha(opacity=1);
+		/*filter: alpha(opacity=0);*/
 		text-indent: 2em;
 		font-size: 1em;
 	    line-height: 1.5;
 	    color: #E0DBDB;
 	    word-spacing: 3px;
+	    color: white;
 	    letter-spacing: 1px;
 
 	}
@@ -339,7 +346,7 @@
 		opacity: 1;
 		display: block;
 		width: 100%;
-		filter: alpha(opacity=1);
+		/*filter: alpha(opacity=0);*/
 		text-indent: 2em;
 		font-size: 1em;
 	    line-height: 1.5;
@@ -384,7 +391,7 @@
 		opacity: 1;
 		display: block;
 		width: 100%;
-		filter: alpha(opacity=1);
+		/*filter: alpha(opacity=0);*/
 		text-indent: 2em;
 		font-size: 1em;
 	    line-height: 1.5;
@@ -408,7 +415,7 @@
 		background-color: black;
 		margin-left: 10px;
 		opacity: 0.5;
-		filter: alpha(opacity=0.5);
+		/*filter: alpha(opacity=0.5);*/
 
 	}
 	.dots1{
@@ -426,7 +433,7 @@
 		background-color: black;
 		margin-left: 10px;
 		opacity: 0.5;
-		filter: alpha(opacity=0.5);
+		/*filter: alpha(opacity=0.5);*/
 
 	}
 	.dots2{
@@ -434,6 +441,7 @@
 		bottom: 5px;
 		left: 50%;
 		margin-left:100px; 
+		z-index: 40;
 	}
 	.dots2 i{
 		display: inline-block;
@@ -444,7 +452,7 @@
 		background-color: black;
 		margin-left: 10px;
 		opacity: 0.5;
-		filter: alpha(opacity=0.5);
+		/*filter: alpha(opacity=0.5);*/
 
 	}
 
@@ -542,4 +550,165 @@
 	}
 	.fcpos ul li a:hover{
 		color: #28d;
+	}
+
+
+	/*cate-sec-style*/
+
+	.cate-sec{
+		display: block;
+		width: 1200px;
+		margin:0px auto;
+		font-family: "Microsoft YaHei";
+		margin-top: -20px;
+		font-size: 16px;
+	}
+	.cate-sec a{
+		text-decoration: none;
+		
+	}
+	.nowwhere{
+		color: #000;
+	}
+	.nowwhere a{
+		color: #000000;
+		font-size: 16px;
+	}
+	.cateseccon{
+		width: 95%;
+		margin:0px auto;
+	}
+	.cateseccon ul li{
+		display: block;
+		overflow: hidden;
+		box-shadow: 0px 0px 2px #2288dd;
+		margin-top: 20px;
+	}
+	.cateseccon ul li>div{
+		display: none;
+	}
+	.cateartimg{
+		width: 50%;
+		float: left;
+	}
+	.cateartimg img{
+		display: block;
+		width: 90%;
+		margin:0px auto;
+	}
+	.cateart{
+		padding-top: 30px;
+		width: 50%;
+		float: left;
+		display: block;
+		text-decoration: none;
+	}
+	.cateart h3{
+
+		font-size: 20px;
+		/*line-height: 50px;*/
+		padding: 16px;
+		display: inline-block;
+	    font-size: 18px;
+	    color: #000000;
+	    width: 580px;
+	    overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+	}
+	.cateart a{
+		display: block;
+		width: 95%;
+		margin: 0px auto;
+	}
+	.cateart p{
+		padding: 20px;
+		word-break: break-all;
+	    text-align: justify;
+	    text-indent: 2em;
+	    hyphens: auto;
+		font-size: 15px;
+	    color: #5B5B5B;
+	    line-height: 24px;
+	    padding-top: 0px;
+	}
+	.catePage{
+		text-align: center;
+		padding: 20px 0px;
+		background-color: #fcf;
+		margin: 20px 0px;
+	}\
+	.cateartlist ul{
+		width: 90%;
+		margin: 0px auto;
+	}
+	.cateartlist ul li{
+		box-shadow: none;
+		border: none;
+		display: block;
+		border-bottom: 1px solid #C3C3C3;
+		padding-bottom: 12px;
+	}
+	.cateartlist ul li h3 a{
+		font-size: 18px;
+		font-weight:500;
+		display: inline-block;
+	    font-size: 18px;
+	    margin-bottom: 5px;
+	    color: #000000;
+	    width: 580px;
+	    overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+	    color: black
+	}
+	.cateartlist ul li span{
+		float: right;
+		font-size: 14px;
+	    color: #C3C3C3;
+	    margin-top: 5px;
+	}
+	.cateartlist ul li h3 a:hover{
+		text-decoration: underline;
+	}
+	.cateartlist ul li p{
+		font-size: 14px;
+	    color: #5B5B5B;
+	    line-height: 20px;
+	    text-indent: 2em;
+	}
+	.singleart{
+		font-family: "Microsoft YaHei";
+	}
+	.singleart h3{
+		font-size: 20px;
+    	font-weight: bold;
+    	text-align: center;
+    	line-height: 50px;
+	}
+	.singleart span{
+		text-align: center;
+	    text-indent: 0;
+	    color: #A6A6A6;
+	    margin-top: 20px;
+	    font-size: 14px;
+	}
+	.singleart p{
+		min-height: 10px;
+	    margin-top: 10px;
+	    text-indent: 32px;
+	    font-size: 16px;
+	    line-height: 24px;
+	    font-weight: 300;
+	    line-height: 2em;
+	    word-break: break-all;
+   		text-align: justify;
+	}
+	.singleart p img{
+		position: relative;
+	    max-width: 670px;
+	    height: 100%;
+	    clear: both;
+	    display: block;
+	    margin: 12px auto;
 	}

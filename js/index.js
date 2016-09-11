@@ -25,7 +25,7 @@ jQuery.extend( jQuery.easing,
         } else {  
             return c*(7.5625*(t-=(2.625/2.75))*t + .984375) + b;  
         }  
-    },  
+    } 
 }); 
 
 $(function(){
@@ -259,8 +259,6 @@ $(function(){
 	},6000);
 	function move(index){
 		$(".slidePic").find("ul").stop();
-		var orignopacity = $(".pic-desc").css("opacity");
-			$(".pic-desc").css({"display":"none","opacity":0});
 			for(var j=0;j<dotss.length;j++){
 				$(dotss[j]).css("background-color","black");
 			}
@@ -268,12 +266,6 @@ $(function(){
 			$(".slidePic").find("ul").animate({"margin-left":-picWidth * index},
 				800,
 				function(){
-					var orginleft = $(".pic-desc").css("left");
-					$(".pic-desc").css("left",0);
-					$(".pic-desc").find("p").css("margin-left",300);
-					$(".pic-desc").css("display","block");
-					$(".pic-desc").animate({"left":orginleft,"opacity":1},600);
-					$(".pic-desc").find("p").animate({"margin-left":0},600);
 					if(!timer){
 							timer = setInterval(function(){
 							nowIndex = (nowIndex+1)%len;
@@ -282,6 +274,17 @@ $(function(){
 					}
 			})
 	}
+})
+
+$(document).ready(function(){
+	// $(window).scrollTo("0px");
+	var cateseccon = $(".cateseccon").find("li").children("div");
+	if( $(window).scrollTop()>200){
+				for(var i=0;i<cateseccon.length;i++){
+					$(cateseccon[i]).animate({"float":"left","margin-left":"0px"});
+					$(cateseccon[i + 1]).animate({"float":"right","margin-right":"0px"});
+				}
+			}
 })
 
 
